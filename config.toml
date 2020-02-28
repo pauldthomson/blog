@@ -1,7 +1,7 @@
-baseURL = "https://paulthomson.dev"
+baseURL = "https://www.paulthomson.dev"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Hugo Hermit"
+title = "My Blog"
 theme = "hermit"
 # enableGitInfo = true
 pygmentsCodefences  = true
