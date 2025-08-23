@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ .Content }}
+
+{{ $posts := where site.RegularPages "Type" "posts" }}
+{{ if $posts }}
+<h2>Recent Posts</h2>
+<ul>
+{{ range first 5 $posts }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> - {{ .Date.Format "January 2, 2006" }}</li>
+{{ end }}
+</ul>
+{{ if gt (len $posts) 5 }}
+<p><a href="/blog/posts/">View all posts →</a></p>
+{{ end }}
+{{ end }}
+{{ end }}
